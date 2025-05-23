@@ -16,7 +16,7 @@ slots:
 
 apps:
   brisk:
-    autostart: brisk --from-startup
+    autostart: brisk-autostart.desktop
     command: brisk
     extensions: [gnome]
     plugs:
