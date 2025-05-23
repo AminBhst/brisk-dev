@@ -6,3 +6,4 @@ Icon=${SNAP}/meta/gui/brisk.png
 Terminal=false
 Type=Application
 Categories=Network;Utility;
+NoDisplay=true
