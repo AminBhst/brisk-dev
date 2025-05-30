@@ -101,3 +101,21 @@ jobs:
           git push origin release-${{ needs.version.outputs.version }}
 
 
+      - name: Install GitHub CLI
+        run: sudo apt install -y gh
+
+      - name: Authenticate gh CLI
+        env:
+          GH_TOKEN: ${{ secrets.REPO_PAT }}
+        run: gh auth login --with-token
+
+      - name: Create Pull Request with gh CLI
+        env:
+          GH_TOKEN: ${{ secrets.REPO_PAT }}
+        run: |
+          gh pr create --repo AminBhst/flathub-test \
+            --title "Release v${{ needs.version.outputs.version }}" \
+            --body "Automated release PR for version v${{ needs.version.outputs.version }}" \
+            --head "release-${{ needs.version.outputs.version }}" \
+            --base master \
+            --reviewer @me --assignee @me || echo "PR already exists or error"
