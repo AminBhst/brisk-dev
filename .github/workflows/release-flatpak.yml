@@ -87,7 +87,7 @@ jobs:
           PAGES_REPO_PAT: ${{ secrets.REPO_PAT }}
         run: |
           git clone https://x-access-token:${PAGES_REPO_PAT}@github.com/AminBhst/flathub-test.git
-          cd io.github.BrisklyDev.Brisk
+          cd flathub-test
           pwd
           git checkout -B release-${{ needs.version.outputs.version }}
           find . -maxdepth 1 -type f ! -name '.gitmodules' -exec rm -rf {} +
