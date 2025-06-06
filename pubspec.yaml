@@ -58,7 +58,6 @@ dependencies:
   args: ^2.4.2
   crypto: ^3.0.3
   convert: ^3.1.1
-  toml: ^0.14.0
 
   cupertino_icons: ^1.0.6
   form_field_validator: ^1.1.0
