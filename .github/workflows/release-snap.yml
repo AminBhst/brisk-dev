@@ -27,6 +27,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Set up Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+          profile: minimal
+
       - name: Update snapcraft.yaml version
         run: |
           cd snap
