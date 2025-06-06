@@ -37,6 +37,7 @@ jobs:
         id: build
 
       - name: cat
+        if: always()
         run: cat /home/runner/.local/state/snapcraft/log/*
 
       - name: Upload artifact 
