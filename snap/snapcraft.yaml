@@ -27,7 +27,6 @@ apps:
 parts:
   brisk:
     plugin: flutter
-    flutter-channel: "3.22.0"
     source: .
     flutter-target: lib/main.dart
     build-packages:
