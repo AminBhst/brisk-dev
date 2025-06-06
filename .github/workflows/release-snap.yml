@@ -33,13 +33,6 @@ jobs:
           echo "Setting version to ${{ needs.version.outputs.version }}"
           sed -i "s/^version: .*/version: ${{ needs.version.outputs.version }}/" snapcraft.yaml
 
-      - name: Set up Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          override: true
-          profile: minimal
-
       - uses: snapcore/action-build@v1.3.0
         id: build
 
