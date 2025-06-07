@@ -14,7 +14,7 @@ def update_brisk_tag_commit(filename, new_tag, new_commit):
                 if (
                     isinstance(source, dict) and
                     source.get('type') == 'git' and
-                    source.get('url') == 'https://github.com/BrisklyDev/brisk.git'
+                    source.get('url') == 'https://github.com/AminBhst/brisk-dev.git'
                 ):
                     source['tag'] = new_tag
                     source['commit'] = new_commit
