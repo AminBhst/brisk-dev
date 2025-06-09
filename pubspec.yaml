@@ -35,7 +35,8 @@ dependencies:
   hotkey_manager: ^0.2.3
   window_to_front: ^0.0.3
   package_info_plus: ^8.3.0
-  tray_manager: ^0.4.0
+  tray_manager:
+    path: ./tray_manager/packages/tray_manager
   launch_at_startup: ^0.5.1
   dartx: ^1.2.0
   encrypt: ^5.0.3
@@ -66,13 +67,6 @@ dependency_overrides:
       url: https://github.com/leanflutter/window_manager.git
       path: packages/window_manager
       ref: af74247d3c1616968ec281435f7410bcc7f9355c
-
-  # This is to solve memory leak on windows when tray icon is set consecutively
-  tray_manager:
-    git:
-      url: https://github.com/jovica-me/tray_manager.git
-      path: packages/tray_manager
-      ref: a2d89f9ab335066b078637a20a369c7275e2f5a4
 
 flutter_launcher_icons:
   windows:
